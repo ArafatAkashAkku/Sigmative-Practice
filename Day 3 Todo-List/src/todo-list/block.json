@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/todo-list",
+	"version": "0.1.0",
+	"title": "Todo List",
+	"category": "widgets",
+	"icon": "editor-ol",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": true,
+		"align": true,
+		"anchor": true,
+		"color": {
+			"gradients": true,
+			"text": true,
+			"background": true
+		}
+	},
+	"attributes": {
+		"tasks": {
+			"type": "array",
+			"default": []
+		},
+		"newTask": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "todo-list",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
