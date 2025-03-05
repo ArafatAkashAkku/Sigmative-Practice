@@ -1,0 +1,105 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/inspector-controls",
+	"version": "0.1.0",
+	"title": "Inspector Controls",
+	"category": "widgets",
+	"icon": "visibility",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"color":{
+			"gradients": true,
+			"link": true,
+			"text": true,
+			"background": true
+		},
+		"anchor": true
+	},
+	"attributes": {
+		"boxBackgroundColor":{
+			"type": "string",
+			"default": "#f00"
+		},
+		"boxBackgroundType": {
+			"type": "string",
+			"default": "color"
+		},
+		"boxBackgroundGradient": {
+			"type": "string",
+			"default": "linear-gradient(135deg, #f00 0%, #00f 100%)"
+		},
+		"boxWidth": {
+			"type": "number",
+			"default": 50
+		},
+		"boxHeight": {
+			"type": "number",
+			"default": 50
+		},
+		"boxMargin": {
+			"type": "number",
+			"default": 10
+		},
+		"boxPadding": {
+			"type": "number",
+			"default": 10
+		},
+		"boxBorder": {
+			"type": "number",
+			"default": 5
+		},
+		"boxBorderStyle": {
+			"type": "string",
+			"default": "solid"
+		},
+		"boxBorderColor": {
+			"type": "string",
+			"default": "#f00"
+		},
+		"boxBorderRadius": {
+			"type": "number",
+			"default": 5
+		},		
+		"text":{
+			"type": "string",
+			"selector": "p",
+			"default": "Hello World Text",
+			"source": "text"
+		},
+		"textFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"textFontWeight": {
+			"type": "string",
+			"default": "normal"
+		},
+		"link": {
+			"type": "string",
+			"selector": "a",
+			"default": "Hello World Link",
+			"source": "text"
+		},
+		"linkFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"linkFontWeight": {
+			"type": "string",
+			"default": "normal"
+		},
+		"linkFontDecoration": {
+			"type": "string",
+			"default": "underline"
+		}	
+	},
+	"textdomain": "inspector-controls",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
