@@ -1,0 +1,61 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/simple-photo-gallery",
+	"version": "0.1.0",
+	"title": "Simple Photo Gallery",
+	"category": "widgets",
+	"icon": "media-document",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": true,
+		"color": {
+			"gradient": true,
+			"link": true,
+			"text": true
+		}
+	},
+	"attributes": {
+		"photos": {
+			"type": "array",
+			"default": [
+				{
+					"id": 1,
+					"src": "https://placehold.co/200x200?text=1",
+					"alt": "Default Placeholder"
+				},
+				{
+					"id": 2,
+					"src": "https://placehold.co/200x200?text=2",
+					"alt": "Default Placeholder"
+				},
+				{
+					"id": 3,
+					"src": "https://placehold.co/200x200?text=3",
+					"alt": "Default Placeholder"
+				},
+				{
+					"id": 4,
+					"src": "https://placehold.co/200x200?text=4",
+					"alt": "Default Placeholder"
+				},
+				{
+					"id": 5,
+					"src": "https://placehold.co/200x200?text=5",
+					"alt": "Default Placeholder"
+				}
+			]
+		},
+		"photoCount": {
+			"type": "number",
+			"default": 1
+		}
+	},
+	"textdomain": "simple-photo-gallery",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

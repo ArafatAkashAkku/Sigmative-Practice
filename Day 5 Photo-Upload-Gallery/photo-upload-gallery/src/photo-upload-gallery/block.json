@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/photo-upload-gallery",
+	"version": "0.1.0",
+	"title": "Photo Upload Gallery",
+	"category": "widgets",
+	"icon": "format-image",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": ["wide", "full"],
+		"color": {
+			"gradients": true,
+			"link": true,
+			"text": true,
+			"background": true
+		}
+	},
+	"attributes": {
+	  "photos": {
+		"type": "array",
+		"default": []
+	  },
+	  "imageCount": {
+		"type": "number",
+		"default": 3
+	  }
+	},
+	"textdomain": "photo-upload-gallery",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}  
