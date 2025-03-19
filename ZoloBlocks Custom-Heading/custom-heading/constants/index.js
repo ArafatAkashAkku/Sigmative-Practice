@@ -17,3 +17,4 @@ export const PRESETS = [
 
 export const HEADING_TEXT_STROKE = 'headingTextStroke';
 export const HEADING_TEXT_SHADOW = 'headingTextShadow';
+export const HEADING_TEXT_ALIGN = 'headingTextAlign';

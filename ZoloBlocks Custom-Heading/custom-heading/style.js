@@ -6,14 +6,13 @@ import { __ } from '@wordpress/i18n';
 /**
  * Internal depencencies
  */
-const { generateTypographyStyles, GlobalStyleHanlder, generateTextStrokeStyles, generateTextShadowStyles } = window.zoloModule;
+const { generateTypographyStyles, GlobalStyleHanlder, generateTextStrokeStyles, generateTextShadowStyles, generateResAlignmentStyle } = window.zoloModule;
 
-import {} from './constants';
 
 import { CUSTOM_HEADING_TYPOGRAPHY } from './constants/typoPrefixConstant';
 import { applyFilters } from '@wordpress/hooks';
 
-import {HEADING_TEXT_STROKE, HEADING_TEXT_SHADOW} from './constants';
+import {HEADING_TEXT_STROKE, HEADING_TEXT_SHADOW, HEADING_TEXT_ALIGN } from './constants';
 
 const Style = ({ props }) => {
     const { attributes, setAttributes } = props;
@@ -37,6 +36,12 @@ const Style = ({ props }) => {
         controlName: HEADING_TEXT_SHADOW,
     });
 
+    const {
+        desktopAlignStyle: DesktopTextAlignTypo,
+        tabAlignStyle: TabTextAlignTypo,
+        mobAlignStyle: MobTextAlignTypo,
+    } = generateResAlignmentStyle({ controlName: HEADING_TEXT_ALIGN, property: 'text-align', attributes });
+
     /**
      * All Style Combination
      */
@@ -47,6 +52,7 @@ const Style = ({ props }) => {
      ${DesktopTextListTypo}
      ${titleTextShadowStyle}
      ${DesktopTextStrokeTypo}
+     ${DesktopTextAlignTypo}
     color:${headingColor}
     }
 

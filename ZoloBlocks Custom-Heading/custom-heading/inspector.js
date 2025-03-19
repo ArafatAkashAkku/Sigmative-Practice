@@ -1,7 +1,7 @@
 /**
  * Internal depencencies
  */
-const { HeaderTabs, AdvancedOptions, ZoloPanelBody, ColorControl, TypographyDropdown, TextShadowControl, TextStrokeControl } = window.zoloModule;
+const { HeaderTabs, AdvancedOptions, ZoloPanelBody, ColorControl, TypographyDropdown, TextShadowControl, TextStrokeControl, ResAlignmentControl } = window.zoloModule;
 
 /**
  * WordPress depencencies
@@ -12,7 +12,7 @@ import { __ } from '@wordpress/i18n';
 
 import objAttributes from './attributes';
 
-import { PRESETS, HEADING_TEXT_STROKE, HEADING_TEXT_SHADOW } from './constants';
+import { PRESETS, HEADING_TEXT_STROKE, HEADING_TEXT_SHADOW, HEADING_TEXT_ALIGN } from './constants';
 import { CUSTOM_HEADING_TYPOGRAPHY } from './constants/typoPrefixConstant';
 
 import { applyFilters } from '@wordpress/hooks';
@@ -110,7 +110,14 @@ function Inspector(props) {
                                 controlName={HEADING_TEXT_SHADOW}
                                 requiredProps={requiredProps}
                             />
-                        </ZoloPanelBody>
+                        </ZoloPanelBody> 
+                        <ZoloPanelBody title={__('Heading Align', 'zoloblocks')} firstOpen={false} panelProps={props}>
+                            <ResAlignmentControl
+                                label={__('Align', 'zoloblocks')}
+                                controlName={HEADING_TEXT_ALIGN}
+                                requiredProps={requiredProps}
+                            />
+                        </ZoloPanelBody> 
                     </>
                 }
                 advancedTab={

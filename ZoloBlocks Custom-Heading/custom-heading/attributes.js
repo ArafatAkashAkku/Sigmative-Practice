@@ -1,12 +1,13 @@
 const {
     generateTypographyAttributes,
     generateTextStrokeAttributies,
-    generateTextShadowAttributies
+    generateTextShadowAttributies,
+    generateResAlignmentAttributies
 } = window.zoloModule;
 
 import * as typographyObjs from './constants/typoPrefixConstant';
 
-import { HEADING_TEXT_STROKE, HEADING_TEXT_SHADOW } from './constants';
+import { HEADING_TEXT_STROKE, HEADING_TEXT_SHADOW,HEADING_TEXT_ALIGN } from './constants';
 
 const attributes = {
     //Global Attributes
@@ -41,6 +42,8 @@ const attributes = {
     ...generateTextStrokeAttributies(HEADING_TEXT_STROKE),
     // headingtextshadow 
     ...generateTextShadowAttributies(HEADING_TEXT_SHADOW),
+
+    ...generateResAlignmentAttributies(HEADING_TEXT_ALIGN),
 
     //Heading Color Attributes
     headingColor: {
