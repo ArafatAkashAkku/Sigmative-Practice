@@ -19,9 +19,9 @@ const Save = (props) => {
             {...useBlockProps.save({
                 className: classnames(uniqueId, classArrayToStr(parentClasses),preset),
             })}
-            {...(zoloId && {
-                id: zoloId,
-            })}
+            // {...(zoloId && {
+            //     id: zoloId,
+            // })}
         >
             {renderHookBefore && renderHookBefore}
             <RichText.Content  className={`zolo-heading-text ${heading}`} tagName={heading} value={headingText} />
